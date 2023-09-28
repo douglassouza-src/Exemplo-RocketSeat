@@ -1,0 +1,20 @@
+{
+  "name": "Exemplo-RocketSeat-y1h61e",
+  "env": "production",
+  "application": {
+    "id": 1695935891,
+    "name": "Exemplo-RocketSeat-y1h61e"
+  },
+  "domain": {
+    "id": 1695934361,
+    "name": "Exemplo-RocketSeat-y1h61e",
+    "url": "xvxhtcekya.map.azionedge.net"
+  },
+  "function": {
+    "id": 11515,
+    "name": "Exemplo-RocketSeat-y1h61e"
+  },
+  "version-id": "20230928220108",
+  "type": "react",
+  "mode": "deliver"
+}
