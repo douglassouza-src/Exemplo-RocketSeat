@@ -9,7 +9,7 @@ function App() {
         <img src={azionLogo} width="100" height="24" />
       </div>
       <div class="content">
-        <img src={reactLogo} height="120" />
+        <p>No oceano de informações, a pérola do insight está mais próxima do que você pensa</p>
       </div>
       <div class="footer">
         <a href="https://www.azion.com/en/documentation/" target="_blank">
