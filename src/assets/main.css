@@ -2,14 +2,15 @@
 
 body {
   padding: 0;
-  margin: 0;   
-  background: linear-gradient(180deg,transparent,#1e1e1e) #221f1e;
+  margin: 0;
+  background: linear-gradient(180deg, transparent, #1e1e1e) #221f1e;
   color: #ffffff;
   font-family: 'Roboto', sans-serif;
 }
 
 h1 {
-  margin: 0; padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 
@@ -19,8 +20,8 @@ a {
   border-radius: .25rem;
   background: transparent;
   border: 1px solid #363636ff;
-  transition: background .2s,border .2s;
-  padding: 1.5rem;    
+  transition: background .2s, border .2s;
+  padding: 1.5rem;
   text-decoration: none;
   margin-right: 0;
   margin-bottom: 1.5rem;
@@ -33,7 +34,7 @@ a:last-child {
 }
 
 a:hover {
-  background: rgba(180,185,188,.15);
+  background: rgba(180, 185, 188, .15);
   border: 1px solid #36363626;
 }
 
@@ -67,7 +68,6 @@ section {
 
 .content::before {
   content: "";
-  background: url('./vector-bg.svg') no-repeat;
   position: absolute;
   width: 807px;
   height: 700px;
@@ -82,7 +82,7 @@ section {
   position: absolute;
   filter: blur(45px);
   transform: translateZ(0);
-  background: conic-gradient(from 180deg at 50% 50%,#502e2233 0deg,#502e2233 55deg,#502e2233 120deg,#502e2233 160deg,transparent 360deg);
+  background: conic-gradient(from 180deg at 50% 50%, #502e2233 0deg, #502e2233 55deg, #502e2233 120deg, #502e2233 160deg, transparent 360deg);
   width: 240px;
   height: 180px;
   z-index: -1;
@@ -113,9 +113,11 @@ section {
     padding: 6rem;
     min-height: calc(100vh - 12rem);
   }
+
   .footer {
     flex-direction: row;
   }
+
   a {
     margin-right: 2.5rem;
     margin-bottom: 0;
@@ -123,4 +125,4 @@ section {
   }
 
 
-} 
+}
