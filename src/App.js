@@ -1,6 +1,5 @@
 import "./assets/main.css";
 import azionLogo from "./assets/azion.svg";
-import reactLogo from "./assets/react.svg";
 
 function App() {
   return (
@@ -9,7 +8,7 @@ function App() {
         <img src={azionLogo} width="100" height="24" />
       </div>
       <div class="content">
-        <p>No oceano de informações, a pérola do insight está mais próxima do que você pensa.</p> 
+        <h1>No oceano de informações, a pérola do insight está mais próxima do que você pensa.</h1>
       </div>
       <div class="footer">
         <a href="https://www.azion.com/en/documentation/" target="_blank">
