@@ -9,6 +9,7 @@ function App() {
       </div>
       <div class="content">
         <h1>No oceano de informações, a pérola do insight está mais próxima do que você pensa.</h1>
+        <h2>Seja muito bem vindo(a) ao Mundo da Edge Computing! </h2>
       </div>
       <div class="footer">
         <a href="https://www.azion.com/en/documentation/" target="_blank">
