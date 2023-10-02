@@ -1,17 +1,40 @@
-import "./assets/main.css";
-import azionLogo from "./assets/azion.svg";
+import React, { useState, useEffect } from 'react';
+import './assets/main.css';
+import azionLogo from './assets/azion.svg';
 
 function App() {
+  const [typedText, setTypedText] = useState('');
+  const finalText = "No oceano de informações, a pérola do insight está mais próxima do que você pensa.";
+
+  useEffect(() => {
+    let currentIndex = 0;
+    const interval = setInterval(() => {
+      if (currentIndex <= finalText.length) {
+        setTypedText(finalText.slice(0, currentIndex));
+        currentIndex++;
+      } else {
+        clearInterval(interval);
+      }
+    }, 70);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
+
   return (
     <section>
-      <div class="header">
-        <img src={azionLogo} alt="logo Azion" width="100" height="24" />
+      <div className="header">
+        <img src={azionLogo} alt="logo Azion" width="100" height="24" className="logo-left" />
       </div>
-      <div class="content">
-        <h1>No oceano de informações, a pérola do insight está mais próxima do que você pensa.</h1>
-        <h2>Seja muito bem vindo(a) ao Mundo da Edge Computing! </h2>
+      <div className="content">
+        <h1>{typedText}</h1>
       </div>
-      <div class="footer">
+      <div>
+        <h3>Seja muito bem-vindo(a) ao Mundo da </h3>
+      </div>
+
+      <div className="footer">
         <a href="https://www.azion.com/en/documentation/" target="_blank" rel="noreferrer">
           <h1>Docs</h1>
           <p>
