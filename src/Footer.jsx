@@ -1,40 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import './assets/main.css';
-import azionLogo from './assets/azion.svg';
+import React from 'react';
 
-function App() {
-  const [typedText, setTypedText] = useState('');
-  const finalText = "No oceano de informações, a pérola do insight está mais próxima do que você pensa.";
-
-  useEffect(() => {
-    let currentIndex = 0;
-    const interval = setInterval(() => {
-      if (currentIndex <= finalText.length) {
-        setTypedText(finalText.slice(0, currentIndex));
-        currentIndex++;
-      } else {
-        clearInterval(interval);
-      }
-    }, 70);
-
-    return () => {
-      clearInterval(interval);
-    };
-  }, []);
-
+function Footer() {
   return (
-    <section>
-      <div className="header">
-        <img src={azionLogo} alt="logo Azion" width="100" height="24" className="logo-left" />
-      </div>
-      <div className="content">
-        <h1>{typedText}</h1>
-      </div>
-      <div>
-        <h3>Seja muito bem-vindo(a) ao Mundo da </h3>
-      </div>
-
-      <div className="footer">
+<div className="footer">
         <a href="https://www.azion.com/en/documentation/" target="_blank" rel="noreferrer">
           <h1>Docs</h1>
           <p>
@@ -62,8 +30,7 @@ function App() {
           </div>
         </a>
       </div>
-    </section>
-  );
-}
 
-export default App;
+  )}
+
+export default Footer;
