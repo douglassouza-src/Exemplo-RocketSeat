@@ -1,59 +1,66 @@
+:root {
+  --cor-fundo: #131212;
+  --cor-texto-principal: #fdfdfdee;
+  --cor-destaque: #f3652b;
+  --cor-botao-fundo: #f3652b;
+  --cor-botao-texto: #f3652b;
+}
+
 body {
   padding: 0;
   margin: 0;
-  background: #131212;
-  color: #ffffff;
-  font-family: sans-serif
+  background: var(--cor-fundo);
+  font-family: sans-serif;
 }
 
 h1 {
   font-size: 2.5rem;
   text-align: center;
-  align-items: center;
+  color: var(--cor-texto-principal);
   max-width: 1000px;
-  color: #fdfdfdee;
 }
 
 h3 {
   font-size: 1.5rem;
   text-align: center;
-  align-items: center;
-  color: #f3652b;
+  color: var(--cor-destaque);
   position: relative;
+  align-items: center;
 }
 
 h3::after {
   content: 'Edge Computing!';
   display: inline-block;
-  background: #f3652b;
+  background: var(--cor-destaque);
   color: #000000;
   padding: 0.2rem 0.5rem;
   border-radius: 3px;
   cursor: pointer;
 }
 
-
 h3:hover::after {
   background: #f2581b;
   cursor: pointer;
 }
 
-h3::after {
-  background: #f3652b;
+h4 {
+  font-size: 1rem;
+  text-align: center;
+  max-width: 1000px;
+  align-items: center;
 }
 
-
 a {
-  color: inherit;
   display: block;
-  border-radius: .50rem;
-  background: transparent;
-  border: 2px solid #f14400;
+  border-radius: 0.5rem;
+  border: 2px solid var(--cor-botao-fundo);
+  color: var(--cor-botao-texto);
   padding: 1.5rem;
   text-decoration: none;
   margin-right: 0;
   margin-bottom: 1.5rem;
-  max-width: 320px;
+  max-width: 280px;
+  min-width: 100px;
   text-align: center;
 }
 
@@ -62,16 +69,16 @@ a:last-child {
 }
 
 a:hover {
-  background: #f3652b;
+  background: var(--cor-botao-fundo);
   color: #000000;
   border: 2px solid #000000;
 }
 
 p {
   margin: 0;
-  font-size: .8rem;
-  line-height: 1.5;
-  max-width: 40ch;
+  font-size: 0.9rem;
+  text-align: center;
+  align-items: center;
 }
 
 section {
@@ -94,17 +101,18 @@ section {
   margin-top: 50px;
 }
 
-.footer {
+.article {
   display: flex;
+  text-align: center;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.footer h1 {
+.article h1 {
   font-weight: 500;
   font-size: 1.2rem;
-  margin-bottom: .7rem;
-  margin-top: .7rem;
+  margin-bottom: 0.7rem;
+  margin-top: 0.7rem;
 }
 
 @media only screen and (min-width: 576px) {
@@ -113,14 +121,29 @@ section {
     min-height: calc(100vh - 12rem);
   }
 
-  .footer {
+  .article {
     flex-direction: row;
+    margin-bottom: 30px;
   }
 
   a {
     margin-right: 2.5rem;
     margin-bottom: 0;
     text-align: left;
+    color: var(--cor-destaque);
   }
+
+  .CardIconContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .footer-wrap {
+    display: flex;
+  }
+
+
 
 }

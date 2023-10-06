@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
 function Content() {
-  const [typedText, setTypedText] = useState('');
-  const finalText = "No oceano de informações, a pérola do insight está mais próxima do que você pensa.";
+  const [typedText, setTypedText] = useState("");
+  const finalText =
+    "No oceano de informações, a pérola do insight está mais próxima do que você pensa.";
 
   useEffect(() => {
     let currentIndex = 0;
@@ -21,9 +22,14 @@ function Content() {
   }, []);
 
   return (
-    <div className="content">
-      <h1>{typedText}</h1>
-    </div>
+    <>
+      <div className="content">
+        <h1>{typedText}</h1>
+      </div>
+      <div>
+        <h3>Seja muito bem-vindo(a) ao Mundo da </h3>
+      </div>
+    </>
   );
 }
 

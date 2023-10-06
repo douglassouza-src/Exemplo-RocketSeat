@@ -1,36 +1,93 @@
-import React from 'react';
+import React from "react";
+import LanguageIcon from "@mui/icons-material/Language";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import YouTubeIcon from "@mui/icons-material/YouTube";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import FeedIcon from "@mui/icons-material/Feed";
+import Twitter from "@mui/icons-material/Twitter";
 
-function Footer() {
+const Footer = () => {
+  const buttonStyle = {
+    cursor: "pointer",
+    margin: "2px",
+    backgroundColor: "#f2581b",
+    borderColor: "#6f3721",
+    borderRadius: "5px",
+  };
+
+  const openLink = (url) => {
+    window.open(url, "_blank", "noopener noreferrer");
+  };
+
   return (
-<div className="footer">
-        <a href="https://www.azion.com/en/documentation/" target="_blank" rel="noreferrer">
-          <h1>Docs</h1>
-          <p>
-            Besides providing structure, it allows interactions to occur with the surface of the element, thus enabling it to have states.
-          </p>
-        </a>
-        <a href="https://medium.com/aziontech" target="_blank" rel="noreferrer">
-          <div>
-            <h1>Medium</h1>
-            <p>
-              Dive deep into our platform's use cases on Medium and join a community where developers connect, collaborate, and innovate.
-            </p>
-          </div>
-        </a>
-        <a href="https://twitter.com/aziontech" target="_blank" rel="noreferrer">
-          <div>
-            <h1>X (formerly Twitter)</h1>
-            <p>Explore our features in-depth and find out what's new on our platform.</p>
-          </div>
-        </a>
-        <a href="https://discord.gg/Yp9N7RMVZy" target="_blank" rel="noreferrer">
-          <div>
-            <h1>Discord</h1>
-            <p>A space for developers to connect, get involved and collaborate.</p>
-          </div>
-        </a>
-      </div>
+    <div className="footer-wrap">
+      <button
+        style={buttonStyle}
+        onClick={() => openLink("https://seusite.com")}
+        title="Visitar o site"
+      >
+        <LanguageIcon />
+      </button>
 
-  )}
+      <button
+        style={buttonStyle}
+        onClick={() => openLink("https://facebook.com/seufacebook")}
+        title="Visitar o Facebook"
+      >
+        <FacebookIcon />
+      </button>
+
+      <button
+        style={buttonStyle}
+        onClick={() => openLink("https://suaurldecarrinho.com")}
+        title="Ver carrinho de compras"
+      >
+        <AddShoppingCartIcon />
+      </button>
+
+      <button
+        style={buttonStyle}
+        onClick={() => openLink("https://instagram.com/seuinstagram")}
+        title="Visitar o Instagram"
+      >
+        <InstagramIcon />
+      </button>
+
+      <button
+        style={buttonStyle}
+        onClick={() => openLink("https://youtube.com/seucanal")}
+        title="Visitar o YouTube"
+      >
+        <YouTubeIcon />
+      </button>
+
+      <button
+        style={buttonStyle}
+        onClick={() => openLink("https://github.com/seugithub")}
+        title="Visitar o GitHub"
+      >
+        <GitHubIcon />
+      </button>
+
+      <button
+        style={buttonStyle}
+        onClick={() => openLink("https://seufeed.com")}
+        title="Ver feed"
+      >
+        <FeedIcon />
+      </button>
+
+      <button
+        style={buttonStyle}
+        onClick={() => openLink("https://twitter.com/seutwitter")}
+        title="Visitar o Twitter"
+      >
+        <Twitter />
+      </button>
+    </div>
+  );
+};
 
 export default Footer;
