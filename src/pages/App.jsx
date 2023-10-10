@@ -1,9 +1,9 @@
 import React from "react";
 import "./index.css";
-import Header from "./Header.jsx";
-import Content from "./Content.jsx";
-import Article from "./Article.jsx";
-import Footer from "./Footer.jsx";
+import Header from "./home/Header";
+import Content from "./home/Content";
+import Article from "./home/Article";
+import Footer from "./home/Footer";
 
 function App() {
   return (
