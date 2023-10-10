@@ -1,0 +1,185 @@
+:root {
+  --color-background: #131212;
+  --color-light: #ffffff;
+  --color-dark: #000000;
+  --color-text-content: #f3cb07ee;
+  --color-emphasis: #82f32b;
+  --color-button-background: #2466a3;
+  --color-button-text: #f32bc4;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background: var(--color-background);
+  font-family: sans-serif;
+}
+
+/* +++++++++++++++++++++|*/
+/* WRAP SECTION         |*/
+/* +++++++++++++++++++++|*/
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  min-height: calc(100vh - 4rem);
+  overflow: hidden;
+}
+
+/* +++++++++++++++++++++|*/
+/* HEADER               |*/
+/* +++++++++++++++++++++|*/
+
+.header {
+  flex: 1;
+  padding: 0px;
+  width: 90%;
+  display: flex;
+  max-height: 70px;
+  align-items: center;
+}
+
+.header-logo-azion {
+  margin-right: auto;
+  display: flex;
+}
+
+.header-logo-rocketseat {
+  margin-left: auto;
+  display: flex;
+}
+
+/* +++++++++++++++++++++|*/
+/* CONTENT              |*/
+/* +++++++++++++++++++++|*/
+
+.content {
+  display: flex;
+  color: var(--color-light);
+  margin-top: 50px;
+}
+
+/* +++++++++++++++++++++|*/
+/* CARDS-ARTICLE        |*/
+/* +++++++++++++++++++++|*/
+
+.article {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.article-card-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.article h1 {
+  font-weight: 500;
+  font-size: 1.2rem;
+  margin-bottom: 0.7rem;
+  margin-top: 0.7rem;
+}
+
+/* +++++++++++++++++++++|*/
+/* FOOTER               |*/
+/* +++++++++++++++++++++|*/
+.footer-wrap {
+  display: flex;
+}
+
+.footer-wrap button {
+  cursor: pointer;
+  margin: 2px;
+  background-color: var(--color-background);
+  color: var(--color-light);
+  border-color: var(--color-emphasis);
+  border-radius: 5px;
+}
+
+/* ++++++++++++++|*/
+/* TEXT RULES    |*/
+/* +++++++++++++ |*/
+h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  color: var(--color-text-content);
+  max-width: 1000px;
+}
+
+h3 {
+  font-size: 1.5rem;
+  text-align: center;
+  color: var(--color-emphasis);
+  position: relative;
+  align-items: center;
+}
+
+h3::after {
+  content: 'Edge Computing!';
+  display: inline-block;
+  background: var(--color-emphasis);
+  color: var(--color-dark);
+  padding: 0.2rem 0.5rem;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+h3:hover::after {
+  background: var(--color-button-background);
+  cursor: pointer;
+}
+
+h4 {
+  font-size: 1rem;
+  text-align: center;
+  max-width: 1000px;
+  align-items: center;
+}
+
+a {
+  display: block;
+  border-radius: 0.5rem;
+  border: 2px solid var(--color-button-background);
+  color: var(--color-button-text);
+  padding: 1.5rem;
+  text-decoration: none;
+  margin: 0.8rem;
+  max-width: 280px;
+  min-width: 100px;
+  text-align: center;
+}
+
+a:hover {
+  background: var(--color-button-background);
+  color: var(--color-dark);
+  border: 2px solid var(--color-dark);
+}
+
+p {
+  margin: 0;
+  font-size: 0.9rem;
+  text-align: center;
+  align-items: center;
+}
+
+/* +++++++++++++++++++++|*/
+/* RESPONSIVENESS RULES |*/
+/* +++++++++++++++++++++|*/
+
+@media only screen and (min-width: 790px) {
+  section {
+    padding: 6rem;
+    min-height: calc(100vh - 12rem);
+  }
+
+  .article {
+    flex-direction: row;
+    margin-bottom: 70px;
+  }
+}
