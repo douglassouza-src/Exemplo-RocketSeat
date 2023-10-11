@@ -4,4 +4,3 @@ const rocketseatLogo = {
 };
 
 export default rocketseatLogo;
-//
