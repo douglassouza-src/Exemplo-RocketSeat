@@ -40,7 +40,6 @@ body::after {
 /* +++++++++++++++++++++|*/
 /* WRAP SECTION         |*/
 /* +++++++++++++++++++++|*/
-
 section {
   display: flex;
   flex-direction: column;
@@ -54,7 +53,6 @@ section {
 /* +++++++++++++++++++++|*/
 /* HEADER               |*/
 /* +++++++++++++++++++++|*/
-
 .header {
   flex: 1;
   padding: 0px;
@@ -77,17 +75,15 @@ section {
 /* +++++++++++++++++++++|*/
 /* CONTENT              |*/
 /* +++++++++++++++++++++|*/
-
 .content {
   display: flex;
   color: var(--color-light);
-  margin-top: 50px;
+  margin: 60px;
 }
 
 /* +++++++++++++++++++++|*/
 /* CARDS-ARTICLE        |*/
 /* +++++++++++++++++++++|*/
-
 .article {
   display: flex;
   text-align: center;
@@ -112,16 +108,26 @@ section {
 /* FOOTER               |*/
 /* +++++++++++++++++++++|*/
 .footer-wrap {
+  margin-right: auto;
   display: flex;
+  margin-top: 20px;
+  margin-left: 10%;
+  overflow: hidden;
 }
 
 .footer-wrap button {
   cursor: pointer;
   margin: 2px;
-  background-color: var(--color-background);
-  color: var(--color-light);
-  border-color: var(--color-emphasis);
+  background-color: transparent;
+  color: #669ac2;
   border-radius: 5px;
+}
+
+@media (max-width: 790px) {
+  .footer-wrap {
+    margin-right: 0;
+    margin-left: 0;
+  }
 }
 
 /* ++++++++++++++|*/
@@ -193,7 +199,6 @@ p {
 /* +++++++++++++++++++++|*/
 /* RESPONSIVENESS RULES |*/
 /* +++++++++++++++++++++|*/
-
 @media only screen and (min-width: 790px) {
   section {
     padding: 6rem;
@@ -211,11 +216,33 @@ p {
 /* MODAL STYLES         |*/
 /* +++++++++++++++++++++|*/
 .open-quiz-button {
+  position: fixed;
+  bottom: 70px;
+  right: 20px;
   background-color: #000000;
-  color: white;
-  padding: 10px;
-  border-radius: 8px;
+  color: #fff;
+  border: 2px solid rgb(94, 255, 1);
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  font-size: 15px;
   cursor: pointer;
-  display: block;
-  margin: 0 auto;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.open-quiz-button:hover {
+  background-color: #1dca1d;
+  color: #0f0d0d;
+  transform: scale(1.2);
+}
+
+.button-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.QuizIcon {
+  font-size: 24px;
 }

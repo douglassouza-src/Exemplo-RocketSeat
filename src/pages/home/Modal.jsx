@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import QuizModal from "../../components/QuizModal";
+import QuizIcon from "@mui/icons-material/Quiz";
 import "../../index";
 
 function Modal() {
@@ -15,8 +16,15 @@ function Modal() {
 
   return (
     <div>
-      <button onClick={openQuizModal} className="open-quiz-button">
-        TESTAR OS MEUS CONHECIMENTOS
+      <button
+        onClick={openQuizModal}
+        className="open-quiz-button"
+        title="Testar Conhecimentos"
+      >
+        <div className="button-content">
+          <QuizIcon />
+          <span>Quiz</span>
+        </div>
       </button>
 
       <QuizModal isOpen={isQuizModalOpen} onRequestClose={closeQuizModal} />

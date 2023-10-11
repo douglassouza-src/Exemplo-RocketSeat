@@ -11,8 +11,8 @@ function App() {
     <section>
       <Header />
       <Content />
-      <Modal />
       <Article />
+      <Modal />
       <Footer />
     </section>
   );
