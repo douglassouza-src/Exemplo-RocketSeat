@@ -4,7 +4,7 @@ import Header from "./home/Header";
 import Content from "./home/Content";
 import Article from "./home/Article";
 import Footer from "./home/Footer";
-import Modal from "../components/Modal";
+import Modal from "./home/Modal";
 
 function App() {
   return (

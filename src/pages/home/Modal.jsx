@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import QuizModal from "./QuizModal";
-import "../index";
+import QuizModal from "../../components/QuizModal";
+import "../../index";
 
 function Modal() {
   const [isQuizModalOpen, setIsQuizModalOpen] = useState(false);

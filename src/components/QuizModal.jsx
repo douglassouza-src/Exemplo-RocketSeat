@@ -1,46 +1,10 @@
 import React, { useState } from "react";
 import Modal from "react-modal";
-import "../index";
-
-const questions = [
-  { text: "Edge computing é uma tecnologia recente.", answer: false },
-  {
-    text: "Edge computing envolve processamento de dados na nuvem.",
-    answer: false,
-  },
-  {
-    text: "Edge computing é útil para reduzir a latência em aplicações.",
-    answer: true,
-  },
-  {
-    text: "Edge computing é apenas aplicável a dispositivos móveis.",
-    answer: false,
-  },
-  // Adicione mais perguntas aqui
-];
-
-const modalStyles = {
-  overlay: {
-    backgroundColor: "rgba(0, 0, 0, 0.7)",
-    zIndex: 1000,
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  content: {
-    position: "relative",
-    inset: "0",
-    backgroundColor: "#f84802",
-    padding: "10px",
-    borderRadius: "15px",
-    border: "black",
-    width: "350px",
-    minHeight: "180px",
-    textAlign: "center",
-    fontSize: "1rem",
-    boxShadow: "0px 1px 5px rgba(255, 115, 0, 0.77)",
-  },
-};
+import startQuizUseCase from "../domain/useCases/startQuizUseCase";
+import answerQuestionUseCase from "../domain/useCases/answerQuestionUseCase";
+import restartQuizUseCase from "../domain/useCases/restartQuizUseCase";
+import { questions } from "../data/questions";
+import modalStyles from "../styles/modalStyles";
 
 const QuizModal = ({ isOpen, onRequestClose }) => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -50,7 +14,9 @@ const QuizModal = ({ isOpen, onRequestClose }) => {
   const [quizCompleted, setQuizCompleted] = useState(false);
 
   const handleAnswer = (answer) => {
-    if (questions[currentQuestion].answer === answer) {
+    const isCorrect = answerQuestionUseCase(questions, currentQuestion, answer);
+
+    if (isCorrect) {
       setScore(score + 1);
     }
 
@@ -63,20 +29,24 @@ const QuizModal = ({ isOpen, onRequestClose }) => {
 
   const handleStartQuiz = () => {
     if (userName.trim() !== "") {
-      setQuizStarted(true);
-      setCurrentQuestion(0);
-      setScore(0);
-      setQuizCompleted(false);
+      startQuizUseCase(
+        setQuizStarted,
+        setCurrentQuestion,
+        setScore,
+        setQuizCompleted
+      );
     }
   };
 
   const handleRestartQuiz = () => {
-    setCurrentQuestion(0);
-    setScore(0);
-    setQuizCompleted(false);
-    setUserName("");
-    setQuizStarted(false);
-    onRequestClose();
+    restartQuizUseCase(
+      setCurrentQuestion,
+      setScore,
+      setQuizCompleted,
+      setUserName,
+      setQuizStarted,
+      onRequestClose
+    );
   };
 
   return (
