@@ -1,19 +1,41 @@
 :root {
-  --color-background: #131212;
+  --color-background: #1e1e1e;
   --color-light: #ffffff;
-  --color-dark: #000000;
-  --color-text-content: #f3cb07ee;
-  --color-emphasis: #82f32b;
-  --color-button-background: #2466a3;
-  --color-button-text: #f32bc4;
+  --color-dark: #0f0d0d;
+  --color-text-content: #ffffffee;
+  --color-emphasis: #f3652b;
+  --color-button-background: #dc4e16;
+  --color-button-text: #f3652b;
 }
 
+
+/* +++++++++++++++++++++|*/
+/* BODY                 |*/
+/* +++++++++++++++++++++|*/
 body {
   padding: 0;
   margin: 0;
-  background: var(--color-background);
   font-family: sans-serif;
+  background-color: var(--color-dark);
+  position: relative;
 }
+
+/* +++++++++++++++++++++|*/
+/* BODY-EARTH-IMG       |*/
+/* +++++++++++++++++++++|*/
+body::after {
+  content: "";
+  background-image: url('../assets/img/earthTech.png');
+  background-repeat: no-repeat;
+  position: fixed;
+  top: -30%;
+  left: 70%;
+  width: 130vw;
+  height: 130vh;
+  opacity: 0.4;
+  z-index: -100;
+}
+
 
 /* +++++++++++++++++++++|*/
 /* WRAP SECTION         |*/
@@ -182,4 +204,18 @@ p {
     flex-direction: row;
     margin-bottom: 70px;
   }
+}
+
+
+/* +++++++++++++++++++++|*/
+/* MODAL STYLES         |*/
+/* +++++++++++++++++++++|*/
+.open-quiz-button {
+  background-color: #000000;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
 }
