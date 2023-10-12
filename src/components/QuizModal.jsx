@@ -80,7 +80,7 @@ const QuizModal = ({ isOpen, onRequestClose }) => {
         <>
           {!quizStarted ? (
             <div>
-              <h2 style={{ color: "#050505" }}>
+              <h2 style={{ color: "#050505", fontSize: "1.4rem" }}>
                 Bem-vindo(a) ao nosso QUIZ sobre EDGE COMPUTING!
               </h2>
               <input
@@ -145,7 +145,10 @@ const QuizModal = ({ isOpen, onRequestClose }) => {
                     color: "black",
                     fontSize: "1rem",
                     width: "48%",
+                    alignItems: "center",
+                    justifyContent: "center",
                     padding: "10px",
+                    paddingBottom: "5px",
                     fontWeight: "bold",
                     borderRadius: "8px",
                     cursor: "pointer",
@@ -159,6 +162,8 @@ const QuizModal = ({ isOpen, onRequestClose }) => {
                     backgroundColor: "#ff0000",
                     color: "black",
                     fontSize: "1rem",
+                    alignItems: "center",
+                    justifyContent: "center",
                     width: "48%",
                     padding: "10px",
                     fontWeight: "bold",
