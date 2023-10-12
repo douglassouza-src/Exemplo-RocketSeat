@@ -6,8 +6,8 @@
   --color-emphasis: #f3652b;
   --color-button-background: #dc4e16;
   --color-button-text: #f3652b;
+  --color-button-quiz: #5eff01;
 }
-
 
 /* +++++++++++++++++++++|*/
 /* BODY                 |*/
@@ -16,7 +16,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: sans-serif;
-  background-color: var(--color-dark);
+  background: linear-gradient(to bottom, #000, #000000ef);
   position: relative;
 }
 
@@ -36,11 +36,9 @@ body::after {
   z-index: -100;
 }
 
-
 /* +++++++++++++++++++++|*/
 /* WRAP SECTION         |*/
 /* +++++++++++++++++++++|*/
-
 section {
   display: flex;
   flex-direction: column;
@@ -54,7 +52,6 @@ section {
 /* +++++++++++++++++++++|*/
 /* HEADER               |*/
 /* +++++++++++++++++++++|*/
-
 .header {
   flex: 1;
   padding: 0px;
@@ -77,22 +74,40 @@ section {
 /* +++++++++++++++++++++|*/
 /* CONTENT              |*/
 /* +++++++++++++++++++++|*/
-
 .content {
   display: flex;
   color: var(--color-light);
-  margin-top: 50px;
+  margin: 60px;
 }
 
 /* +++++++++++++++++++++|*/
-/* CARDS-ARTICLE        |*/
+/* ARTICLE-CARDS        |*/
 /* +++++++++++++++++++++|*/
-
 .article {
   display: flex;
   text-align: center;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.article-card {
+  display: block;
+  border-radius: 0.5rem;
+  border: 2px solid var(--color-button-background);
+  color: var(--color-button-text);
+  padding: 1.5rem;
+  text-decoration: none;
+  margin: 0.8rem;
+  max-width: 280px;
+  min-width: 100px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.article-card:hover {
+  background: var(--color-button-background);
+  color: var(--color-dark);
+  border: 2px solid var(--color-dark);
 }
 
 .article-card-icon {
@@ -109,19 +124,87 @@ section {
 }
 
 /* +++++++++++++++++++++|*/
+/* ARTICLE CONTENT      |*/
+/* +++++++++++++++++++++|*/
+.ArticleContent {
+  max-width: 1000px;
+  padding: 25px;
+  border-radius: 15px;
+  text-align: left;
+  background-color: #00000082;
+  margin-bottom: 5px;
+}
+
+.ArticleContent h2 {
+  display: flex;
+  text-align: left;
+  font-size: 24px;
+  color: var(--color-button-text);
+  margin-bottom: 10px;
+}
+
+.ArticleContent p {
+  text-align: left;
+  font-size: 16px;
+  color: #817e7e;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  bottom: 100px;
+}
+
+
+/* +++++++++++++++++++++|*/
 /* FOOTER               |*/
 /* +++++++++++++++++++++|*/
 .footer-wrap {
+  margin-right: auto;
   display: flex;
+  margin-top: 20px;
+  margin-left: 10%;
+  overflow: hidden;
 }
 
 .footer-wrap button {
   cursor: pointer;
   margin: 2px;
-  background-color: var(--color-background);
-  color: var(--color-light);
-  border-color: var(--color-emphasis);
+  background-color: transparent;
+  color: #8f5d39;
   border-radius: 5px;
+}
+
+/* +++++++++++++++++++++|*/
+/* QUIZ STYLES          |*/
+/* +++++++++++++++++++++|*/
+.open-quiz-button {
+  position: fixed;
+  bottom: 70px;
+  right: 20px;
+  background-color: #000000;
+  color: var(--color-text-content);
+  border: 2px solid var(--color-button-quiz);
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.open-quiz-button:hover {
+  background-color: #1dca1d;
+  color: #0f0d0d;
+  transform: scale(1.2);
+}
+
+.button-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.QuizIcon {
+  font-size: 24px;
 }
 
 /* ++++++++++++++|*/
@@ -158,29 +241,12 @@ h3:hover::after {
 }
 
 h4 {
+  display: flex;
   font-size: 1rem;
+  justify-content: center;
   text-align: center;
   max-width: 1000px;
   align-items: center;
-}
-
-a {
-  display: block;
-  border-radius: 0.5rem;
-  border: 2px solid var(--color-button-background);
-  color: var(--color-button-text);
-  padding: 1.5rem;
-  text-decoration: none;
-  margin: 0.8rem;
-  max-width: 280px;
-  min-width: 100px;
-  text-align: center;
-}
-
-a:hover {
-  background: var(--color-button-background);
-  color: var(--color-dark);
-  border: 2px solid var(--color-dark);
 }
 
 p {
@@ -190,10 +256,10 @@ p {
   align-items: center;
 }
 
+
 /* +++++++++++++++++++++|*/
 /* RESPONSIVENESS RULES |*/
 /* +++++++++++++++++++++|*/
-
 @media only screen and (min-width: 790px) {
   section {
     padding: 6rem;
@@ -206,16 +272,9 @@ p {
   }
 }
 
-
-/* +++++++++++++++++++++|*/
-/* MODAL STYLES         |*/
-/* +++++++++++++++++++++|*/
-.open-quiz-button {
-  background-color: #000000;
-  color: white;
-  padding: 10px;
-  border-radius: 8px;
-  cursor: pointer;
-  display: block;
-  margin: 0 auto;
+@media (max-width: 790px) {
+  .footer-wrap {
+    margin-right: 0;
+    margin-left: 0;
+  }
 }
