@@ -81,7 +81,7 @@ const QuizModal = ({ isOpen, onRequestClose }) => {
           {!quizStarted ? (
             <div>
               <h2 style={{ color: "#050505", fontSize: "1.4rem" }}>
-                Bem-vindo(a) ao nosso QUIZ sobre EDGE COMPUTING!
+                Bem-vindo(a) ao QUIZ sobre EDGE COMPUTING!
               </h2>
               <input
                 type="text"

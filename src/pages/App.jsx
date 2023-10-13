@@ -11,6 +11,7 @@ import {
   AlternateContent3,
   AlternateContent4,
 } from "./home/ArticleContent";
+import FooterCopyright from "./home/FooterCopyright";
 
 function App() {
   const [showAlternateContent, setShowAlternateContent] = useState([
@@ -37,6 +38,7 @@ function App() {
       {showAlternateContent[3] && <AlternateContent4 />}
       <Modal />
       <Footer />
+      <FooterCopyright />
     </section>
   );
 }
