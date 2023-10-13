@@ -15,25 +15,36 @@
 body {
   padding: 0;
   margin: 0;
-  font-family: sans-serif;
-  background: linear-gradient(to bottom, #000, #000000ef);
+  font-family: Helvetica;
+  background: #000000;
   position: relative;
 }
 
 /* +++++++++++++++++++++|*/
 /* BODY-EARTH-IMG       |*/
 /* +++++++++++++++++++++|*/
+body::before,
 body::after {
   content: "";
-  background-image: url('../assets/img/earthTech.png');
-  background-repeat: no-repeat;
   position: fixed;
-  top: -30%;
-  left: 70%;
   width: 130vw;
   height: 130vh;
-  opacity: 0.4;
+  opacity: 0.8;
   z-index: -100;
+}
+
+body::before {
+  background-image: url('../assets/img/earthTech.png');
+  top: -30%;
+  left: 70%;
+  opacity: 0.6;
+}
+
+body::after {
+  background-image: url('../assets/img/light.gif');
+  top: 0%;
+  left: 72%;
+  opacity: 0.7;
 }
 
 /* +++++++++++++++++++++|*/
@@ -46,7 +57,6 @@ section {
   align-items: center;
   padding: 2rem;
   min-height: calc(100vh - 4rem);
-  overflow: hidden;
 }
 
 /* +++++++++++++++++++++|*/
@@ -55,7 +65,7 @@ section {
 .header {
   flex: 1;
   padding: 0px;
-  width: 90%;
+  width: 85%;
   display: flex;
   max-height: 70px;
   align-items: center;
@@ -66,18 +76,13 @@ section {
   display: flex;
 }
 
-.header-logo-rocketseat {
-  margin-left: auto;
-  display: flex;
-}
-
 /* +++++++++++++++++++++|*/
 /* CONTENT              |*/
 /* +++++++++++++++++++++|*/
 .content {
   display: flex;
   color: var(--color-light);
-  margin: 60px;
+  margin: 40px;
 }
 
 /* +++++++++++++++++++++|*/
@@ -85,13 +90,13 @@ section {
 /* +++++++++++++++++++++|*/
 .article {
   display: flex;
-  text-align: center;
   flex-direction: column;
   justify-content: space-between;
 }
 
 .article-card {
   display: block;
+  justify-content: space-between;
   border-radius: 0.5rem;
   border: 2px solid var(--color-button-background);
   color: var(--color-button-text);
@@ -99,7 +104,7 @@ section {
   text-decoration: none;
   margin: 0.8rem;
   max-width: 280px;
-  min-width: 100px;
+  min-width: 120px;
   text-align: center;
   cursor: pointer;
 }
@@ -116,13 +121,6 @@ section {
   align-items: center;
 }
 
-.article h1 {
-  font-weight: 500;
-  font-size: 1.2rem;
-  margin-bottom: 0.7rem;
-  margin-top: 0.7rem;
-}
-
 /* +++++++++++++++++++++|*/
 /* ARTICLE CONTENT      |*/
 /* +++++++++++++++++++++|*/
@@ -131,7 +129,7 @@ section {
   padding: 25px;
   border-radius: 15px;
   text-align: left;
-  background-color: #00000082;
+  background-color: #eae1e102;
   margin-bottom: 5px;
 }
 
@@ -159,18 +157,41 @@ section {
 .footer-wrap {
   margin-right: auto;
   display: flex;
-  margin-top: 20px;
+  margin-top: 5px;
   margin-left: 10%;
   overflow: hidden;
+
 }
 
 .footer-wrap button {
-  cursor: pointer;
   margin: 2px;
   background-color: transparent;
-  color: #8f5d39;
+  color: #eae1e139;
+  border-radius: 4px;
+}
+
+.footer-wrap button:hover {
+  margin: 2px;
+  color: var(--color-button-background);
   border-radius: 5px;
 }
+
+.footer-copyright {
+  color: #aea8a8;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.footer-copyright a {
+  color: #eb450e;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer-copyright a:hover {
+  color: #f4e8e8;
+}
+
 
 /* +++++++++++++++++++++|*/
 /* QUIZ STYLES          |*/
@@ -241,7 +262,6 @@ h3:hover::after {
 }
 
 h4 {
-  display: flex;
   font-size: 1rem;
   justify-content: center;
   text-align: center;
