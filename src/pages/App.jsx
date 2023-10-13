@@ -3,7 +3,6 @@ import "./index.css";
 import Header from "./home/Header";
 import Content from "./home/Content";
 import Article from "./home/Article";
-import Footer from "./home/Footer";
 import Modal from "./home/Modal";
 import {
   AlternateContent1,
@@ -37,7 +36,6 @@ function App() {
       {showAlternateContent[2] && <AlternateContent3 />}
       {showAlternateContent[3] && <AlternateContent4 />}
       <Modal />
-      <Footer />
       <FooterCopyright />
     </section>
   );
