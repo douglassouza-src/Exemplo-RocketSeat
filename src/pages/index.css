@@ -37,14 +37,29 @@ body::before {
   background-image: url('../assets/img/earthTech.png');
   top: -30%;
   left: 70%;
-  opacity: 0.6;
+  opacity: 0.4;
+  animation: fadeIn 5s ease-in-out;
+  /* Use a animação "fadeIn" em 5 segundos */
+
 }
 
 body::after {
   background-image: url('../assets/img/light.gif');
   top: 0%;
   left: 72%;
-  opacity: 0.7;
+  opacity: 0.4;
+  animation: fadeIn 5s ease-in-out;
+
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0.00;
+  }
+
+  to {
+    opacity: 0.4;
+  }
 }
 
 /* +++++++++++++++++++++|*/
@@ -82,7 +97,8 @@ section {
 .content {
   display: flex;
   color: var(--color-light);
-  margin: 40px;
+  margin-top: 50px;
+  margin-bottom: 30px;
 }
 
 /* +++++++++++++++++++++|*/
@@ -92,6 +108,7 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin-bottom: -10px;
 }
 
 .article-card {
@@ -154,24 +171,18 @@ section {
 /* +++++++++++++++++++++|*/
 /* FOOTER               |*/
 /* +++++++++++++++++++++|*/
-.footer-wrap {
-  margin-right: auto;
+.social-wrap {
   display: flex;
-  margin-top: 5px;
-  margin-left: 10%;
-  overflow: hidden;
-
+  padding-left: 20px;
 }
 
-.footer-wrap button {
-  margin: 2px;
+.social-wrap button {
   background-color: transparent;
-  color: #eae1e139;
-  border-radius: 4px;
+  color: #ffffffcb;
+  font-size: 1px;
 }
 
-.footer-wrap button:hover {
-  margin: 2px;
+.social-wrap button:hover {
   color: var(--color-button-background);
   border-radius: 5px;
 }
@@ -199,7 +210,7 @@ section {
 .open-quiz-button {
   position: fixed;
   bottom: 70px;
-  right: 20px;
+  right: 40px;
   background-color: #000000;
   color: var(--color-text-content);
   border: 2px solid var(--color-button-quiz);
@@ -288,7 +299,7 @@ p {
 
   .article {
     flex-direction: row;
-    margin-bottom: 70px;
+    margin-bottom: 20px;
   }
 }
 

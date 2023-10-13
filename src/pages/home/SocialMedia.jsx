@@ -8,63 +8,63 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import FeedIcon from "@mui/icons-material/Feed";
 import Twitter from "@mui/icons-material/Twitter";
 
-const Footer = () => {
+const SocialMedia = () => {
   const openLink = (url) => {
     window.open(url, "_blank", "noopener noreferrer");
   };
 
   return (
-    <div className="footer-wrap">
+    <div className="social-wrap">
       <button
         onClick={() => openLink("https://www.azion.com")}
         title="Visitar o site"
       >
-        <LanguageIcon />
+        <LanguageIcon style={{ fontSize: "15px" }} />
       </button>
       <button
         onClick={() => openLink("https://www.azion.com/pt-br/contate-vendas/")}
         title="Contrate nossos serviços"
       >
-        <AddShoppingCartIcon />
+        <AddShoppingCartIcon style={{ fontSize: "15px" }} />
       </button>
       <button
         onClick={() => openLink("https://www.youtube.com/aziontech")}
         title="Visitar o YouTube"
       >
-        <YouTubeIcon />
+        <YouTubeIcon style={{ fontSize: "15px" }} />
       </button>
       <button
         onClick={() => openLink("https://www.instagram.com/aziontech")}
         title="Visitar o Instagram"
       >
-        <InstagramIcon />
+        <InstagramIcon style={{ fontSize: "15px" }} />
       </button>
       <button
         onClick={() => openLink("https://www.facebook.com/aziontech")}
         title="Visitar o Facebook"
       >
-        <FacebookIcon />
+        <FacebookIcon style={{ fontSize: "15px" }} />
       </button>
       <button
         onClick={() => openLink("https://twitter.com/aziontech")}
         title="Visitar o Twitter"
       >
-        <Twitter />
+        <Twitter style={{ fontSize: "15px" }} />
       </button>
       <button
         onClick={() => openLink("https://github.com/aziontech")}
         title="Visitar o GitHub"
       >
-        <GitHubIcon />
+        <GitHubIcon style={{ fontSize: "15px" }} />
       </button>
       <button
         onClick={() => openLink("https://www.azion.com/pt-br/blog/")}
         title="Visitar nosso Blog"
       >
-        <FeedIcon />
+        <FeedIcon style={{ fontSize: "15px" }} />
       </button>
     </div>
   );
 };
 
-export default Footer;
+export default SocialMedia;
